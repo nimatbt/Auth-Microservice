@@ -38,9 +38,9 @@
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
 </datatypes><table x="102" y="201" name="user">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
+<row name="id" null="0" autoincrement="1">
+<datatype>VARCHAR(64)</datatype>
+</row>
 <row name="username" null="0" autoincrement="0">
 <datatype>VARCHAR(128)</datatype>
 </row>
@@ -49,13 +49,13 @@
 </row>
 <row name="role" null="0" autoincrement="0">
 <datatype>VARCHAR(32)</datatype>
-</row>
+<default>'NULL'</default></row>
 <row name="created_at" null="0" autoincrement="0">
 <datatype>DATETIME</datatype>
 <default>'NULL'</default></row>
-<row name="expires_at" null="1" autoincrement="0">
+<row name="expires_at" null="0" autoincrement="0">
 <datatype>DATETIME</datatype>
-<default>NULL</default></row>
+<default>'NULL'</default></row>
 <row name="last_login_at" null="1" autoincrement="0">
 <datatype>DATETIME</datatype>
 <default>NULL</default></row>
@@ -68,14 +68,20 @@
 <row name="failed_auth_at" null="1" autoincrement="0">
 <datatype>DATETIME</datatype>
 <default>NULL</default></row>
-<row name="failed_auth_count" null="1" autoincrement="0">
+<row name="failed_auth_count" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>0</default></row>
+<row name="status" null="0" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="status" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
+<key type="UNIQUE" name="">
+<part>username</part>
+</key>
 <key type="PRIMARY" name="">
 <part>id</part>
+</key>
+<key type="INDEX" name="">
+<part>username</part>
 </key>
 </table>
 </sql>
