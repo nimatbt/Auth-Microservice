@@ -1,3 +1,4 @@
+from authz.model import User # 18-1 : 47'
 from authz.util import jsonify
 
 class UserController:
