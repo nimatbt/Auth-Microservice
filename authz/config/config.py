@@ -12,6 +12,8 @@ class Config:
 	
 	SECRET_KEY = environ.get("AMIMA_AUTHZ_SECRET_KEY", "SECRET-KEY")
 	
+	TIMEZONE = environ.get("AMIMA_AUTHZ_TIMEZONE", "Asia/Tehran") # 18-1 : 27'
+	
 	################### Database Config ####### 17-1 : 37' ############
 	
 	SQLALCHEMY_DATABASE_URI = environ.get("AMIMA_AUTHZ_DATABASE_URI", None)
