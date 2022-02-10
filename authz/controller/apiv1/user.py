@@ -1,4 +1,5 @@
 from authz.model import User # 18-1 : 47'
+from authz.schema.apiv1 import UserSchema
 from authz.util import jsonify
 
 class UserController:
