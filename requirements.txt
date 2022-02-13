@@ -19,6 +19,7 @@ marshmallow==3.14.1
 marshmallow-sqlalchemy==0.27.0
 pkg_resources==0.0.0
 pycparser==2.21
+PyJWT==2.3.0
 PyMySQL==1.0.2
 python-dotenv==0.19.2
 pytz==2021.3
