@@ -14,6 +14,8 @@ class Config:
 	
 	TIMEZONE = environ.get("AMIMA_AUTHZ_TIMEZONE", "Asia/Tehran") # 18-1 : 27'
 	
+	JWT_ALGO = environ.get("AMIMA_AUTHZ_JWT_ALGO", "HS512") # 21-1 : 22'
+	
 	################### Database Config ####### 17-1 : 37' ############
 	
 	SQLALCHEMY_DATABASE_URI = environ.get("AMIMA_AUTHZ_DATABASE_URI", None)
@@ -31,3 +33,12 @@ class Config:
 	USER_DEFAULT_EXPIRY_TIME = int(environ.get("AMIMA_AUTHZ_USER_DEFAULT_EXPIRY_TIME", "365"))
 	
 	USER_DEFAULT_STATUS = int(environ.get("AMIMA_AUTHZ_USER_DEFAULT_STATUS", "3"))
+	
+	USER_ENABLED_STATUS = 1 # 21-1 : 20'
+	
+	User_ACTIVATED_STATUS = 2
+	
+	USER_ALL_STATUS = 3
+	
+	USER_DEFAULT_TOKEN_EXPIRY_TIME = int(environ.get("AMIMA_AUTHZ_USER_DEFAULT_TOKEN_EXPIRY_TIME", "86400")) # 21-1 : 26'
+	
